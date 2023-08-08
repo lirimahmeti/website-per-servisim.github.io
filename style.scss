@@ -121,16 +121,7 @@ $number-of-rows: 8;
         }
     }
 }
-.social-post{
-    display: flex;
-    justify-content: space-between;
-}
-.post{
-    background-color: white;
-    width: 400px;
-    height: 600px;
-    padding: 0px;
-}
+
 .more-info{
     display: flex;
     flex-direction: row;
@@ -138,8 +129,11 @@ $number-of-rows: 8;
     align-content: center;
 }
 footer{
-    background-color: #cacaca;
-    color: #363636;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    a{
+        color: #f5efed;
+    }
 }
 .phone{
     align-self: flex-end;
@@ -149,12 +143,17 @@ footer{
     @include transition;
 }
 .contact-icons{
+   
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    height: 90px;
+  
+    
     
     .facebook-icon:hover, .instagram-icon:hover, .whatsapp-icon:hover{
         width: 70px;
+        opacity: 0.8;
     }
 }
 
