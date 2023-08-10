@@ -255,6 +255,9 @@ iframe {
     list-style-type: none;
     list-style-position: inside;
   }
+  nav img {
+    margin-left: -30px;
+  }
   nav .buttonat-nav {
     display: none;
   }
