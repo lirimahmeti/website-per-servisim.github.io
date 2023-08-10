@@ -259,6 +259,11 @@ nav{
             margin-left: -30px;
         }
     }
+    #hidden-menu a:active{
+        #hidden-menu{
+            display: none;
+        }
+    }
     .bars ul{
         list-style-type: none;
         list-style-position: inside;

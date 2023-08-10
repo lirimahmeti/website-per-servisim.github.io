@@ -251,6 +251,9 @@ iframe {
     margin-right: 50px;
     margin-left: -30px;
   }
+  nav #hidden-menu a:active #hidden-menu {
+    display: none;
+  }
   nav .bars ul {
     list-style-type: none;
     list-style-position: inside;
