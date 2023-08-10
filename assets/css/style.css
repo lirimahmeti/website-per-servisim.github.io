@@ -238,7 +238,7 @@ iframe {
   nav #bars {
     font-size: 30px;
   }
-  nav .bars:active, nav .bars:hover #hidden-menu {
+  nav .bars:hover #hidden-menu {
     opacity: 1;
     display: block;
     position: fixed;
@@ -247,12 +247,9 @@ iframe {
     border-radius: 10px;
     margin-top: 10px;
   }
-  nav .bars:active li a, nav .bars:hover #hidden-menu li a {
+  nav .bars:hover #hidden-menu li a {
     margin-right: 50px;
     margin-left: -30px;
-  }
-  nav #hidden-menu a:active #hidden-menu {
-    display: none;
   }
   nav .bars ul {
     list-style-type: none;
