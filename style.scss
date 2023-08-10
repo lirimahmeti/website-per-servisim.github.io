@@ -12,6 +12,51 @@ $text-color: #f5efed;
     transition-delay: 0.05s;
     transition-timing-function: ease-in-out;
 }
+//navigation
+.container8{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    
+}
+nav{
+    
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #0f0a0a85;
+    .bars{
+        display: none;
+    }
+    .buttonat-nav{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-button{
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .nav-button:hover{
+        opacity: 0.7;
+    }
+    .logo img{
+        width: 150px;
+    }
+    
+
+}
+
 .reviews{
     p{
         font-size: 18px;
@@ -46,7 +91,6 @@ body{
     
 } 
 .container{
-        
         max-width: 960px;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -186,6 +230,47 @@ footer{
  }
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+nav{
+    @include transition;
+    .bars #hidden-menu{
+        display: none;
+    }
+    justify-content: flex-end;
+    .bars{
+        display: inline-block;
+    }
+    //butoni bars
+    #bars{
+        font-size: 30px;
+    }
+    //ngjyra e tekstit te listes se fshehur
+
+    //show page navigation menus
+    .bars:hover #hidden-menu{
+        opacity: 1;
+        display: block;
+        position: fixed;
+        right: 35px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        margin-top: 10px;
+        li a{
+            margin-right: 50px;
+            margin-left: -30px;
+        }
+    }
+    .bars ul{
+        list-style-type: none;
+        list-style-position: inside;
+    }
+    
+    
+    
+    .buttonat-nav{
+        display: none;
+    }
+
+}
  header{
     background-attachment: scroll;
  }
@@ -213,6 +298,7 @@ footer{
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
+    
     header{
         background-attachment: scroll;
      }

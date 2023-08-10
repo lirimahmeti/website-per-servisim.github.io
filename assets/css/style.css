@@ -1,3 +1,44 @@
+.container8 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+nav {
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(15, 10, 10, 0.5215686275);
+}
+nav .bars {
+  display: none;
+}
+nav .buttonat-nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav-button {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+nav .nav-button:hover {
+  opacity: 0.7;
+}
+nav .logo img {
+  width: 150px;
+}
+
 .reviews p {
   font-size: 18px;
 }
@@ -181,6 +222,42 @@ iframe {
 }
 
 @media (max-width: 575.98px) {
+  nav {
+    transition: all;
+    transition-duration: 0.1s;
+    transition-delay: 0.05s;
+    transition-timing-function: ease-in-out;
+    justify-content: flex-end;
+  }
+  nav .bars #hidden-menu {
+    display: none;
+  }
+  nav .bars {
+    display: inline-block;
+  }
+  nav #bars {
+    font-size: 30px;
+  }
+  nav .bars:hover #hidden-menu {
+    opacity: 1;
+    display: block;
+    position: fixed;
+    right: 35px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  nav .bars:hover #hidden-menu li a {
+    margin-right: 50px;
+    margin-left: -30px;
+  }
+  nav .bars ul {
+    list-style-type: none;
+    list-style-position: inside;
+  }
+  nav .buttonat-nav {
+    display: none;
+  }
   header {
     background-attachment: scroll;
   }
