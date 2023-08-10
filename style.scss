@@ -246,7 +246,7 @@ nav{
     //ngjyra e tekstit te listes se fshehur
 
     //show page navigation menus
-    .bars:hover #hidden-menu{
+    .bars:active, .bars:hover #hidden-menu{
         opacity: 1;
         display: block;
         position: fixed;
