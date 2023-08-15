@@ -129,6 +129,25 @@ main {
   border-radius: 10px;
 }
 
+.center {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.grid1 {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+}
+.grid1 h2 {
+  display: none;
+}
+
 .prices {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -175,6 +194,12 @@ main {
 
 .rreshti-8 {
   background-color: rgb(221, 221, 221);
+}
+
+.card1 img, .card1 video {
+  border: 2px solid white;
+  width: 400px;
+  border-radius: 10px;
 }
 
 .more-info {
@@ -279,6 +304,19 @@ iframe {
     border: 1px solid gray;
     padding: 20px;
     border-radius: 10px;
+  }
+  .grid1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 1fr);
+  }
+  .grid1 h1 {
+    display: none;
+  }
+  .grid1 h2 {
+    display: block;
+  }
+  .card1 img, .card1 video {
+    width: 100%;
   }
 }
 @media (max-width: 767.98px) {
