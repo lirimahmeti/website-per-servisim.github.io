@@ -1,0 +1,239 @@
+@import "mixins";
+$background-color: #0f0a0a;
+$text-color: #f5efed;
+
+//base html
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+} 
+html{
+    scroll-behavior: smooth;
+}
+    *::selection{
+    background-color: $text-color;
+    color: $background-color;
+}
+//butonat
+.button{
+    border: 2px solid $text-color;
+    padding: 10px;
+    border-radius: 200px;
+    text-decoration: none;
+    color: $text-color;
+    @include transition;
+}
+.button:hover{
+    padding: 10px 15px;
+    opacity: 0.7;
+}
+//container bazik
+.container{
+        max-width: 960px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: auto;
+
+    }
+//navigation bar
+nav .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav{
+    padding: 20px;
+    position: fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #0f0a0a85;
+    .bars{
+        display: none;
+    }
+    .buttonat-nav{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-button{
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .nav-button:hover{
+        opacity: 0.7;
+    }
+    .logo img{
+        width: 150px;
+    }
+}
+.reviews{
+    p{
+        font-size: 18px;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+//header
+header{
+    @include paddings;
+    background-color: rgb(9, 0, 61);
+    background-image: url(../../images/background\ image.png);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: -30px;
+
+    color: $text-color;
+   
+    p{
+        font-size: 22px;
+        span{
+            text-decoration: underline;
+            font-size: 30px;
+        }
+        
+    }
+}
+//main
+main{
+    background: rgb(0,0,0);
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(19,47,69,1) 34%, rgba(0,0,0,1) 100%);
+    @include paddings;
+    padding-top: 100px;
+    background-color: black;
+    color: $text-color;
+    line-height: 25px;
+    
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 1fr 1fr;
+    gap: 15px;
+    h1{
+      grid-column: 1 / 3;
+
+    }
+    .card{
+        border: 1px solid gray;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+}
+.center{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+.grid1{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+    h2{
+        display: none
+    }
+}
+//tabela qmimev
+.prices{
+    @include paddings;
+}
+.price-table{
+    background-color: $text-color;
+    color: $background-color;
+    border-collapse: collapse;
+    margin: 25px auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    
+    th{
+       
+    background-color: rgb(44, 30, 122);
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+    }
+    td{
+        padding: 12px 15px;
+    }
+    ::selection{
+        background-color: $background-color;
+        color: $text-color;
+    }
+}
+    .title{
+            padding-bottom: 15px;
+        }
+//krijimi i klasav per stilizimin e tabeles
+$number-of-rows: 8;
+
+@for $i from 1 through $number-of-rows{
+    
+    @if $i % 2 == 0{
+        .rreshti-#{$i}{
+            background-color: rgb(221, 221, 221);
+        }
+    }
+}
+.card1{
+    img, video{
+        border: 2px solid white;
+        width: 350px;
+        border-radius: 10px;
+    }
+}
+.more-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+footer{
+    background-color: #2b2b2b;
+    color: #ffffff;
+    a{
+        color: #f5efed;
+    }
+}
+.phone{
+    align-self: flex-end;
+}
+.icon{
+    width: 60px;
+    @include transition;
+}
+.contact-icons{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 90px;
+  
+    
+    
+    .facebook-icon:hover, .instagram-icon:hover, .whatsapp-icon:hover{
+        width: 70px;
+        opacity: 0.8;
+    }
+}
+
+ iframe{
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 30px;
+ }
+@import "mobile";
+@import "tablet";

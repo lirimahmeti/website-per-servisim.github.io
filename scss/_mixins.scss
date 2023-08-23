@@ -1,0 +1,10 @@
+@mixin paddings{
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+@mixin transition{
+    transition: all;
+    transition-duration: 0.1s;
+    transition-delay: 0.05s;
+    transition-timing-function: ease-in-out;
+}
